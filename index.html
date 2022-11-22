@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <article>
+        <h1>Modo escuro utilizando somente HTML e CSS</h1>
+        <br><br><br>
+        <p>É possível criar o efeito de "dark mode" utilizando somente o CSS e o HTML com o atributo checked e tags input radio, combinados às variáveis do CSS.
+            <br>
+            <br>
+            <br>
+        <p>No arquivo CSS desse mini-projeto temos quatro padrões de cores disponíveis sem utilizar nada de Javascript, tudo no CSS puro.</p>
+        <br><br><br>
+        <p>O elemento has() do CSS funciona como uma condicional (if), checando qual dos seletores está marcado e aplicando, por meio das variáveis declaradas, as alterações de cores representativas daquele seletor.</p>
+        <br><br><br>
+
+        <p>A declaração de variáveis no CSS se dá utilizando, direto no arquivo CSS: <br><pre><blockquote> elemento {
+            --cor-bg-principal: brown;
+          }</blockquote></pre></p> 
+          <br>
+
+          <p>
+          Para utilizar a varíavel a sintaxe é: <br><pre><blockquote>  elemento {
+            background-color: var(--cor-bg-principal);
+          }
+           </blockquote></pre></p>
+
+        </p>
+        <br><br><br>
+        <p>Para uma explicação mais detalhada é possível consultar o <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/Using_CSS_custom_properties" target="_blank">MDN Web</a>.</p>
+        <br><br><br>
+        <p>Deve ser observado que o has() ainda não é aceito por todos os navegadores, sendo necessário fazer um failsafe com javascript para garantir o funcionamento desta funcionalidade. É possível conferir pelo site <a href="https://caniuse.com/" target="_blank">Can i use</a> quais navegadores aceitam, ou não, essa funcionalidade.</p>
+    </article>
+    <footer>
+        <ul>
+            <li><input name="color" type="radio"  id="light" checked></li>
+            <li><input name="color" type="radio" id="dark"></li>
+        </ul>
+    </footer>
+</body>
+</html>
